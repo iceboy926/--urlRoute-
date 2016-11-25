@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Xg4-VH-yB3">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="jJB-dw-NRP">
+            <objects>
+                <navigationController id="Xg4-VH-yB3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0vq-rH-4AA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="YGv-yZ-kks"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cuc-kN-IPH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-179" y="460"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="kMainBoard" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9N-gF-i0U">
+                                <rect key="frame" x="255" y="285" width="90" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="静态路由动作">
+                                    <color key="titleColor" red="1" green="0.41508175790054869" blue="0.043022509992508673" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="staticActionWithParams:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dlM-Fs-crH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9l-dU-v6T">
+                                <rect key="frame" x="270" y="367" width="60" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="混合动作">
+                                    <color key="titleColor" red="1" green="0.41508175790054869" blue="0.043022509992508673" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="mixActionWithParams:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Or-Dc-Kgl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6am-XM-kKP">
+                                <rect key="frame" x="240" y="325" width="120" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="带参动态路由动作">
+                                    <color key="titleColor" red="1" green="0.41508175790054869" blue="0.043022509992508673" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dynaimcActionWithParams:" destination="BYZ-38-t0r" eventType="touchUpInside" id="obd-1E-rpy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1d-uF-Hiu">
+                                <rect key="frame" x="248" y="409" width="105" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="名字重定向动作">
+                                    <color key="titleColor" red="1" green="0.41508175790054869" blue="0.043022509992508673" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="nameAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lmw-bX-S1U"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="K9l-dU-v6T" firstAttribute="top" secondItem="6am-XM-kKP" secondAttribute="bottom" constant="12" id="71x-0H-esn"/>
+                            <constraint firstItem="6am-XM-kKP" firstAttribute="top" secondItem="O9N-gF-i0U" secondAttribute="bottom" constant="10" id="KOX-JI-hVs"/>
+                            <constraint firstItem="f1d-uF-Hiu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="So6-QN-R34"/>
+                            <constraint firstItem="K9l-dU-v6T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UtM-Rh-qWZ"/>
+                            <constraint firstItem="O9N-gF-i0U" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fwL-Rd-kFr"/>
+                            <constraint firstItem="O9N-gF-i0U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uqv-5d-uXg"/>
+                            <constraint firstItem="6am-XM-kKP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zUz-uN-N7z"/>
+                            <constraint firstItem="f1d-uF-Hiu" firstAttribute="top" secondItem="K9l-dU-v6T" secondAttribute="bottom" constant="12" id="ziH-8s-Fyb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wIS-3P-0dh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="557" y="460"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="qKp-lE-8a4">
+            <objects>
+                <viewController storyboardIdentifier="homevc" id="BM2-0D-GQD" customClass="HomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wre-Bq-3ZN"/>
+                        <viewControllerLayoutGuide type="bottom" id="bXI-FM-6AS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dSN-lR-luT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vlW-Rk-wZ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="469" y="1115"/>
+        </scene>
+        <!--User View Controller-->
+        <scene sceneID="DLY-uv-8ZK">
+            <objects>
+                <viewController storyboardIdentifier="uservc" id="aXQ-Sc-woJ" customClass="UserViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JMU-Tg-Caq"/>
+                        <viewControllerLayoutGuide type="bottom" id="MJv-OZ-7WR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="E1a-L8-qwL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MWf-gd-LqE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="421" y="1792"/>
+        </scene>
+    </scenes>
+</document>
